@@ -31,7 +31,7 @@ Although their names can give you a hint, i'll explain what each one of these se
 
 `if(IsPlayerNPC(playerid)) return 1;`
 
-**¿Como usar?**
+**¿Cómo usar?**
 
 Abre el archivo Zombeydere.pwn y busca lo siguiente:
 
