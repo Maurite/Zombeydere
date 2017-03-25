@@ -1,8 +1,7 @@
 /*
 	Troydere made this out of his ballsack.
-
 	I'm from Venezuela. We clean our assholes with copyright so you can do pretty much what you want with this script.
-	
+		
 	I'll take advantage of this opportunity to make a global call: Please, scripters, programmers, whoever you are, stop doing the following:
 	
 	new
