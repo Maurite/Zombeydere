@@ -11,11 +11,11 @@ How to use?
 
 Open the Zombeydere.pwn file and find the following:
 
-`#define DUMMY_QUANT
+```#define DUMMY_QUANT
 
 #define MAX_ZOMBEY
 
-#define MAX_ZOMBEY_PER_AREA`
+#define MAX_ZOMBEY_PER_AREA```
 
 Although their names can give you a hint, i'll explain what each one of these settings do:
 
@@ -35,11 +35,11 @@ IMPORTANTE: Añade la siguiente linea en el tope de las callbacks OnPlayerConnec
 
 Abre el archivo Zombeydere.pwn y busca lo siguiente:
 
-`#define DUMMY_QUANT
+```#define DUMMY_QUANT
 
 #define MAX_ZOMBEY
 
-#define MAX_ZOMBEY_PER_AREA`
+#define MAX_ZOMBEY_PER_AREA```
 
 Aunque sus nombres pueden darte una idea, explicaré que hace cada una de esas opciones:
 
