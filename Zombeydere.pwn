@@ -108,6 +108,17 @@ public OnRNPCDeath(npcid, killerid, reason)
 	return 1;
 }
 
+public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
+{
+	if(issuerid != INVALID_PLAYER_ID && IsPlayerNPC(issuerid))
+	{
+		new Float:healtu;
+		GetPlayerHealth(playerid,healtu);
+		SetPlayerHealth(playerid,healtu - random (9)); // Edit this in order to control the damage the Zombies issue on the player.
+	}
+	return 0;
+}
+
 // -------- Disorganized code and such -----------
 
 public OnFilterScriptInit()
