@@ -2,6 +2,11 @@
 Simple script with RNPC and Icognito's Streamer to create Zombie NPCs
 
 [ENGLISH]
+
+IMPORTANT: Add the following line on top of your gamemode's OnPlayerConnect and OnPlayerSpawn callbacks.
+
+`if(IsPlayerNPC(playerid)) return 1;`
+
 How to use?
 
 Open the Zombeydere.pwn file and find the following:
@@ -19,6 +24,11 @@ MAX_ZOMBEY is the quantity of zombeys that will connect to your server. They con
 MAX_ZOMBEY_PER_AREA is the number of zombeys that will spawn in the areas. Default is 10. There's no limit set but keep the MAX below 20.
 
 [ESPAÑOL]
+
+IMPORTANTE: Añade la siguiente linea en el tope de las callbacks OnPlayerConnect y OnPlayerSpawn de tu gamemode.
+
+`if(IsPlayerNPC(playerid)) return 1;`
+
 ¿Como usar?
 
 Abre el archivo Zombeydere.pwn y busca lo siguiente:
