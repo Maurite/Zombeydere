@@ -215,24 +215,24 @@ public ZombeyDisconnect()
 	return 1;
 }
 
-public DummyZombeys()
+public DummyZombeys(id = 0)
 {
 	new naem[MAX_PLAYER_NAME],DummyCount;
-	format(naem,sizeof naem,"DummyNPC%d%d%d",random(400),random(300),random(100));
+	format(naem,sizeof naem,"DummyNPC%d",id);
 	DummyCount = ConnectRNPC(naem);
-	if(DummyCount < DUMMY_QUANT) SetTimer("DummyZombeys",90,false);
+	if(DummyCount < DUMMY_QUANT) SetTimerEx("DummyZombeys",90,false,"i",DummyCount+1);
 	else {PoolZombeys(); SetTimer("DummyRemove",200 * MAX_ZOMBEY,false);}
 	return 1;
 }
 
-public PoolZombeys()
+public PoolZombeys(id = 0)
 {
 	new name[MAX_PLAYER_NAME],zombey;
-	format(name,sizeof name,"Z%d%d%d",random(10),random(200),random(500));
+	format(name,sizeof name,"Z%d%d%d",id);
 	zombey = ConnectRNPC(name);
 	NPCdere[zombey][dArea] = -1;
 	NPCdere[zombey][dPool] = true;
-	if(zombey < DUMMY_QUANT + MAX_ZOMBEY) SetTimer("PoolZombeys",70,false);
+	if(zombey < DUMMY_QUANT + MAX_ZOMBEY) SetTimerEx("PoolZombeys",70,false,"i",zombey+1);
 	return 1;
 }
 
