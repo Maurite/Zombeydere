@@ -35,7 +35,7 @@ forward DummyRemove();
 forward RequestPoolZombeys(zone);
 forward ReturnPoolZombeys(zone);
 forward ZombeyCleanUp();
-forward PoolZombeys();
+forward PoolZombeys(id);
 
 enum ZOMBEY
 {
@@ -221,11 +221,11 @@ public DummyZombeys(id = 0)
 	format(naem,sizeof naem,"DummyNPC%d",id);
 	DummyCount = ConnectRNPC(naem);
 	if(DummyCount < DUMMY_QUANT) SetTimerEx("DummyZombeys",90,false,"i",DummyCount+1);
-	else {PoolZombeys(); SetTimer("DummyRemove",200 * MAX_ZOMBEY,false);}
+	else {PoolZombeys(0); SetTimer("DummyRemove",200 * MAX_ZOMBEY,false);}
 	return 1;
 }
 
-public PoolZombeys(id = 0)
+public PoolZombeys(id)
 {
 	new name[MAX_PLAYER_NAME],zombey;
 	format(name,sizeof name,"Z%d%d%d",id);
