@@ -30,7 +30,7 @@
 forward OnZombeySpawn(zombieid);
 forward ZombeyDisconnect();
 forward ZombeyFollow();
-forward DummyZombeys();
+forward DummyZombeys(id);
 forward DummyRemove();
 forward RequestPoolZombeys(zone);
 forward ReturnPoolZombeys(zone);
@@ -125,7 +125,7 @@ public OnFilterScriptInit()
 {
 	printf("[Zombeydere] Zombeydere loaded.");
 	ZombeyTimer = SetTimer("ZombeyFollow",1000,true);
-	DummyZombeys();
+	DummyZombeys(0);
 	for(new z = 1; z < sizeof ZombeySpawns; z++)
 	{
 		dZombeySpawns[z][0] = CreateDynamicSphere(ZombeySpawns[z][0],ZombeySpawns[z][1],ZombeySpawns[z][2],200,0,0);
@@ -215,7 +215,7 @@ public ZombeyDisconnect()
 	return 1;
 }
 
-public DummyZombeys(id = 0)
+public DummyZombeys(id)
 {
 	new naem[MAX_PLAYER_NAME],DummyCount;
 	format(naem,sizeof naem,"DummyNPC%d",id);
